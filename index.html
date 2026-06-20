@@ -389,11 +389,41 @@
 </footer>
 
 <script>
-    function irParaPagamento() {
-        // URL do Mercado Pago (será preenchida após configurar)
-        // Por enquanto, abre um alerta
-        window.location.href = "https://www.mercadopago.com.br/checkout/v1/payment/redirect/8de1a515-a865-4761-a6be-1cab8bd91734/review/?preference-id=93123590-4225b26c-e325-4a63-aeee-48b9c79b30a7";
-        // Substitua pela URL real do seu link de assinatura recorrente
+    async function irParaPagamento() {
+        const botao = event.target;
+        const textoOriginal = botao.textContent;
+        
+        // Desabilita o botão e mostra loading
+        botao.disabled = true;
+        botao.textContent = "Carregando...";
+        
+        try {
+            // Chama a API pra gerar o link de assinatura
+            const response = await fetch("https://parkwash-api.onrender.com/pagamento/assinatura", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email: "cliente@parkwash.com.br" })
+            });
+            
+            if (!response.ok) {
+                throw new Error(`Erro ${response.status}: Não conseguimos gerar seu link de pagamento`);
+            }
+            
+            const dados = await response.json();
+            
+            if (dados.init_point) {
+                // Redireciona pro Mercado Pago
+                window.location.href = dados.init_point;
+            } else {
+                throw new Error("Resposta inválida da API");
+            }
+        } catch (erro) {
+            // Reabilita o botão e mostra o erro
+            botao.disabled = false;
+            botao.textContent = textoOriginal;
+            alert(`Erro ao processar sua solicitação: ${erro.message}\n\nTente novamente em alguns momentos.`);
+            console.error("Erro na geração de link:", erro);
+        }
     }
 </script>
 
