@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park & Wash - Software de Gestão para Estacionamentos e Lava-Rápidos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .logo-section img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .logo-section h1 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-left: 65px;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #f59e0b;
+            color: white;
+            padding: 16px 48px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .cta-button:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+
+        /* ===== PRICING ===== */
+        .pricing {
+            padding: 80px 0;
+            background: #f9fafb;
+        }
+
+        .pricing h3 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1e3a8a;
+        }
+
+        .price-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .price-amount {
+            font-size: 56px;
+            font-weight: 700;
+            color: #2563eb;
+            margin: 20px 0;
+        }
+
+        .price-period {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .price-features {
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .price-features li {
+            list-style: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .price-features li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        /* ===== FEATURES ===== */
+        .features {
+            padding: 80px 0;
+        }
+
+        .features h3 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1e3a8a;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #1e3a8a;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            background: #f3f4f6;
+            padding: 80px 0;
+        }
+
+        .testimonials h3 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1e3a8a;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1e3a8a;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #f59e0b;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .pricing h3,
+            .features h3,
+            .testimonials h3 {
+                font-size: 28px;
+            }
+
+            .cta-button {
+                padding: 14px 36px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container">
+        <div class="logo-section">
+            <div style="width: 50px; height: 50px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #2563eb;">PW</div>
+            <h1>Park & Wash</h1>
+        </div>
+        <p class="tagline">Software de Gestão para Estacionamentos e Lava-Rápidos</p>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h2>Controle Total do Seu Negócio</h2>
+        <p>Gestione estacionamentos e lava-rápidos com facilidade. Reduz perda, controla estoque e gera relatórios detalhados.</p>
+        <button class="cta-button" onclick="irParaPagamento()">Comece Agora - R$ 119,90/mês</button>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+    <div class="container">
+        <h3>Simples e Transparente</h3>
+        <div class="price-card">
+            <h4>Park & Wash Pro</h4>
+            <div class="price-amount">R$ 119,90</div>
+            <div class="price-period">por mês</div>
+            
+            <ul class="price-features">
+                <li>Dashboard em tempo real</li>
+                <li>Gestão de entradas/saídas</li>
+                <li>Controle de estoque</li>
+                <li>Relatórios detalhados</li>
+                <li>Backup automático</li>
+                <li>Suporte por email</li>
+                <li>Atualizações grátis</li>
+            </ul>
+
+            <button class="cta-button" onclick="irParaPagamento()" style="width: 100%;">Começar Teste Gratuito</button>
+            <p style="margin-top: 20px; color: #666; font-size: 14px;">Sem cartão de crédito. Sem compromisso.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <div class="container">
+        <h3>Por que escolher Park & Wash?</h3>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h4>Dashboard em Tempo Real</h4>
+                <p>Veja todos os dados do seu negócio num único painel. Entradas, saídas, faturamento e mais.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h4>Segurança Garantida</h4>
+                <p>Seus dados são protegidos com criptografia. Backup automático todos os dias.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h4>Relatórios Inteligentes</h4>
+                <p>Gere relatórios detalhados. Identifique tendências e tome decisões melhores.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <h4>Fácil de Usar</h4>
+                <p>Interface intuitiva. Nenhum conhecimento técnico necessário. Comece em minutos.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h4>Atualizações Grátis</h4>
+                <p>Novas funcionalidades e melhorias constantemente. Sempre grátis.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h4>Suporte Rápido</h4>
+                <p>Dúvidas? Entre em contato. Respondemos em até 24 horas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+    <div class="container">
+        <h3>O que dizem nossos clientes</h3>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Park & Wash transformou a forma como gerencio meu estacionamento. Reduzi perdas em 40% no primeiro mês!"</p>
+            <p class="testimonial-author">João Silva - Estacionamento Centro</p>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Simples de usar, eficaz e o preço é justo. Recomendo para qualquer estacionamento ou lava-rápido."</p>
+            <p class="testimonial-author">Maria Santos - Lava Rápido Express</p>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"O suporte é excelente. Qualquer dúvida eles resolvem rápido. Vale muito a pena!"</p>
+            <p class="testimonial-author">Carlos Mendes - Auto Park</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section style="background: #1e3a8a; color: white; padding: 60px 0; text-align: center;">
+    <div class="container">
+        <h3 style="font-size: 36px; margin-bottom: 20px;">Comece a Usar Agora</h3>
+        <p style="font-size: 18px; margin-bottom: 30px;">Sem instalação complicada. Sem compromisso. Cancele quando quiser.</p>
+        <button class="cta-button" onclick="irParaPagamento()">Acesse Park & Wash</button>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p><strong>Park & Wash</strong> © 2026 - Todos os direitos reservados</p>
+        <p>Desenvolvido com ❤️ por <a href="mailto:cmte_leal@yahoo.com.br">Victoriae Sumus</a></p>
+        <p>Dúvidas? <a href="mailto:cmte_leal@yahoo.com.br">Entre em contato</a> | Tel: <a href="tel:11999997925">(11) 99999-7925</a></p>
+    </div>
+</footer>
+
+<script>
+    function irParaPagamento() {
+        // URL do Mercado Pago (será preenchida após configurar)
+        // Por enquanto, abre um alerta
+        window.location.href = "https://www.mercadopago.com.br/checkout/v1/payment/redirect/8de1a515-a865-4761-a6be-1cab8bd91734/review/?preference-id=93123590-4225b26c-e325-4a63-aeee-48b9c79b30a7";
+        // Substitua pela URL real do seu link de assinatura recorrente
+    }
+</script>
+
+</body>
+</html>
