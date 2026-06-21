@@ -264,6 +264,8 @@
             }
         }
     </style>
+    <!-- Mercado Pago Security Script (antifraude - gera MP_DEVICE_SESSION_ID) -->
+    <script src="https://www.mercadopago.com/v2/security.js" view="checkout"></script>
 </head>
 <body>
 
@@ -398,10 +400,32 @@
         botao.textContent = "Carregando...";
         
         try {
+            // Aguarda Device ID do Mercado Pago (máx 2 segundos)
+            let deviceId = sessionStorage.getItem('MP_DEVICE_SESSION_ID');
+            let tentativas = 0;
+            
+            while (!deviceId && tentativas < 20) {
+                await new Promise(resolve => setTimeout(resolve, 100));
+                deviceId = sessionStorage.getItem('MP_DEVICE_SESSION_ID');
+                tentativas++;
+            }
+            
+            if (deviceId) {
+                console.log("✅ Device ID capturado:", deviceId);
+            } else {
+                console.warn("⚠️ Device ID não capturado após 2 segundos (continuando mesmo assim)");
+            }
+            
+            // Prepara headers com Device ID
+            const headers = { "Content-Type": "application/json" };
+            if (deviceId) {
+                headers["X-meli-session-id"] = deviceId;
+            }
+            
             // Chama a API pra gerar o link de assinatura
             const response = await fetch("https://parkwash-api.onrender.com/pagamento/assinatura", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: headers,
                 body: JSON.stringify({ email: "cliente@parkwash.com.br" })
             });
             
