@@ -1,1002 +1,454 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park & Wash - Software de Gestão para Estacionamentos e Lava-Rápidos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!-- SEO Otimizado - Meta Tags Principais -->
-<title>Curso Boneca Judie | Aprenda a Criar Bonecas Premium Que Vendem por R$ 180-250</title>
-<meta name="description" content="Aprenda a criar bonecas de pano premium que vendem de R$ 180 a R$ 250. Técnica profissional da Judie com moldes inclusos. Acesso vitalício + 7 dias de garantia. Curso online com suporte VIP.">
-<meta name="keywords" content="curso boneca de pano, artesanato lucrativo, boneca Judie, renda extra artesanato, costura criativa, curso bonecas premium, artesanato profissional, como fazer bonecas de pano, vender bonecas artesanais">
-<meta name="author" content="Adriana Leal">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.seusite.com.br/">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.seusite.com.br/">
-<meta property="og:title" content="Curso Boneca Judie | Crie Bonecas Premium Que Vendem por R$ 180-250">
-<meta property="og:description" content="Aprenda técnica profissional para criar bonecas de pano premium. Acesso vitalício + Moldes em PDF. R$ 119,90">
-<meta property="og:image" content="https://www.seusite.com.br/imagens/judie-grama2.JPG">
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://www.seusite.com.br/">
-<meta property="twitter:title" content="Curso Boneca Judie | Crie Bonecas Premium">
-<meta property="twitter:description" content="Aprenda técnica profissional para criar bonecas de pano premium. Acesso vitalício + Moldes em PDF">
-<meta property="twitter:image" content="https://www.seusite.com.br/imagens/judie-grama2.JPG">
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-<!-- Schema.org Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Curso Online Coelhinha Judie",
-  "image": "https://www.seusite.com.br/imagens/judie-grama2.JPG",
-  "description": "Curso completo para criar bonecas de pano premium com técnica profissional. Inclui 30 aulas e moldes em PDF.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Adriana Leal - Escola de Bonecas"
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "https://pay.hotmart.com/J103928362V",
-    "priceCurrency": "BRL",
-    "price": "119.90",
-    "availability": "https://schema.org/InStock",
-    "seller": {
-      "@type": "Organization",
-      "name": "Adriana Leal"
-    }
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "127"
-  }
-}
-</script>
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "Curso Boneca Judie - Técnica Premium",
-  "description": "Aprenda a criar bonecas de pano com acabamento profissional através de 30 aulas práticas",
-  "provider": {
-    "@type": "Person",
-    "name": "Adriana Leal",
-    "description": "Artesã especialista em design de bonecas de pano com mais de 15 anos de experiência"
-  },
-  "hasCourseInstance": {
-    "@type": "CourseInstance",
-    "courseMode": "online",
-    "courseWorkload": "PT10H"
-  }
-}
-</script>
+        .logo-section img {
+            width: 50px;
+            height: 50px;
+        }
 
-<!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YLJ9XMYGXC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YLJ9XMYGXC', {
-    'link_attribution': true
-  });
-  
-  // EVENTO: ViewItem quando a página carrega
-  window.addEventListener('load', function() {
-    // Google Analytics
-    gtag('event', 'view_item', {
-      currency: 'BRL',
-      value: 119.90,
-      items: [{
-        item_id: 'judie_001',
-        item_name: 'Curso Coelhinha Judie',
-        item_category: 'Curso Online',
-        price: 119.90,
-        quantity: 1
-      }]
-    });
-    
-    // Facebook Pixel
-    if (typeof fbq !== 'undefined') {
-      fbq('track', 'ViewContent', {
-        content_name: 'Curso Coelhinha Judie',
-        content_ids: ['judie_001'],
-        content_type: 'product',
-        value: 119.90,
-        currency: 'BRL'
-      });
-    }
-  });
-</script>
+        .logo-section h1 {
+            font-size: 28px;
+            font-weight: 700;
+        }
 
-<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  
-  fbq('init', '1543960563395738');
-  fbq('track', 'PageView');
-</script>
-<noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1543960563395738&ev=PageView&noscript=1"/>
-</noscript>
+        .tagline {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-left: 65px;
+        }
 
-<!-- Fonte moderna -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
 
-<style>
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  color: #333;
-  background: #fffafc;
-}
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
 
-section { padding: 50px 20px; }
-.container { max-width: 900px; margin: auto; }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
 
-h1 { 
-  font-size: 42px;
-  line-height: 1.2;
-  text-align: center;
-  color: #2d2d2d;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
+        .cta-button {
+            display: inline-block;
+            background: #f59e0b;
+            color: white;
+            padding: 16px 48px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
 
-h2 { 
-  font-size: 32px;
-  text-align: center;
-  color: #c94a7c;
-  margin-bottom: 20px;
-  font-weight: 700;
-  line-height: 1.3;
-}
+        .cta-button:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
 
-h3 { 
-  font-size: 24px;
-  color: #c94a7c;
-  margin: 20px 0 10px;
-  font-weight: 600;
-  line-height: 1.4;
-}
+        /* ===== PRICING ===== */
+        .pricing {
+            padding: 80px 0;
+            background: #f9fafb;
+        }
 
-p { font-size: 17px; line-height: 1.7; color: #444; margin-bottom: 15px; }
+        .pricing h3 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1e3a8a;
+        }
 
-.hero {
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(180deg, #fffafc 0%, #ffe6f0 100%);
-}
-.hero .subtitle { 
-  font-size: 16px; 
-  color: #c94a7c; 
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.hero .subheadline { 
-  font-size: 20px; 
-  color: #555; 
-  margin: 15px auto;
-  max-width: 700px;
-}
-.hero img {
-  width: 100%; max-width: 600px;
-  border-radius: 16px; margin: 30px auto;
-  display: block; object-fit: cover;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
+        .price-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            max-width: 500px;
+            margin: 0 auto;
+        }
 
-.price-box {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  padding: 40px 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-  max-width: 600px;
-  margin: 40px auto;
-  border: 3px solid #c94a7c;
-  text-align: center;
-}
-.price-label {
-  font-size: 16px;
-  color: #333;
-  margin: 5px 0;
-}
-.price { 
-  font-size: 56px; 
-  font-weight: bold; 
-  color: #c94a7c;
-  margin: 10px 0;
-  line-height: 1;
-}
-.installments {
-  font-size: 18px;
-  color: #666;
-  margin: 5px 0 20px 0;
-}
-.installments strong {
-  color: #333;
-}
-.price-details {
-  text-align: left;
-  margin: 25px 0;
-  padding: 0 20px;
-}
-.price-details p {
-  margin: 8px 0;
-  font-size: 15px;
-  color: #333;
-}
+        .price-amount {
+            font-size: 56px;
+            font-weight: 700;
+            color: #2563eb;
+            margin: 20px 0;
+        }
 
-.profit-highlight {
-  background: linear-gradient(135deg, #e6f9e6 0%, #ccf2cc 100%);
-  border: 3px solid #28a745;
-  border-radius: 16px;
-  padding: 30px;
-  margin: 30px auto;
-  text-align: center;
-  max-width: 600px;
-}
-.profit-highlight h3 {
-  color: #28a745;
-  font-size: 26px;
-  margin-top: 0;
-}
-.profit-highlight .big-number {
-  font-size: 48px;
-  font-weight: bold;
-  color: #28a745;
-  margin: 15px 0;
-}
-.profit-highlight p {
-  font-size: 17px;
-  color: #555;
-  margin-bottom: 10px;
-}
+        .price-period {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
 
-.button {
-  display: inline-block;
-  background: linear-gradient(135deg, #c94a7c 0%, #a0365f 100%);
-  color: #fff;
-  padding: 22px 45px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 8px 25px rgba(160,54,95,0.4);
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
-  max-width: 500px;
-}
-.button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(160,54,95,0.6);
-}
-.button-info {
-  display: block;
-  font-size: 12px;
-  color: #666;
-  margin-top: 12px;
-  text-align: center;
-}
+        .price-features {
+            text-align: left;
+            margin: 30px 0;
+        }
 
-.video-section video {
-  width: 100%; 
-  max-width: 700px;
-  height: auto;
-  border-radius: 16px;
-  display: block; 
-  margin: 20px auto;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-  background-color: #000;
-}
+        .price-features li {
+            list-style: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
 
-.card {
-  background: #fff; 
-  border-radius: 20px;
-  padding: 35px; 
-  margin-bottom: 35px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  width: 100%;
-}
+        .price-features li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 20px;
+        }
 
-.benefits-list {
-  list-style: none;
-  padding: 0;
-  margin: 30px 0;
-}
-.benefits-list li {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 12px;
-  border-left: 4px solid #c94a7c;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  font-size: 16px;
-  line-height: 1.6;
-}
-.benefits-list li strong {
-  color: #c94a7c;
-  display: block;
-  margin-bottom: 5px;
-  font-size: 17px;
-}
+        /* ===== FEATURES ===== */
+        .features {
+            padding: 80px 0;
+        }
 
-.comparison {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin: 30px auto;
-  max-width: 100%;
-}
-.comparison-box {
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-}
-.comparison-box.without {
-  background: #fff0f0;
-  border: 2px solid #ffcccb;
-}
-.comparison-box.with {
-  background: #f0fff4;
-  border: 2px solid #c6f6d5;
-}
-.comparison-box h4 {
-  margin-top: 0;
-  font-size: 18px;
-}
-.comparison-box ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-}
-.comparison-box ul li {
-  margin-bottom: 10px;
-  font-size: 15px;
-}
+        .features h3 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1e3a8a;
+        }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-.testimonial {
-  background: #fff;
-  border: 2px solid #ffe6f0;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-.testimonial-text {
-  font-style: italic;
-  color: #555;
-  margin-bottom: 12px;
-  font-size: 16px;
-}
-.testimonial-author {
-  font-weight: 600;
-  color: #c94a7c;
-  font-size: 15px;
-}
-.testimonial-result {
-  font-size: 14px;
-  color: #28a745;
-  font-weight: 600;
-  margin-top: 8px;
-}
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
 
-.guarantee-box {
-  background: #e7f3ff;
-  border: 3px solid #2196F3;
-  padding: 30px;
-  border-radius: 16px;
-  text-align: center;
-  margin: 30px auto;
-  max-width: 100%;
-}
-.guarantee-box h3 {
-  margin-top: 0;
-  font-size: 24px;
-  color: #2196F3;
-}
+        .feature-card {
+            text-align: center;
+        }
 
-/* Botão CTA fixo no mobile */
-.sticky-cta-mobile {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(135deg, #c94a7c 0%, #a0365f 100%);
-  padding: 15px;
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
-  z-index: 9999;
-  text-align: center;
-}
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
 
-.sticky-cta-mobile .button {
-  margin: 0;
-  width: 100%;
-  max-width: 100%;
-  padding: 16px 20px;
-  font-size: 16px;
-  box-shadow: none;
-}
+        .feature-card h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #1e3a8a;
+        }
 
-.sticky-cta-mobile .price-mini {
-  color: white;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
+        .feature-card p {
+            color: #666;
+            font-size: 14px;
+        }
 
-@media (max-width: 768px) {
-  h1 { font-size: 30px; }
-  h2 { font-size: 26px; }
-  h3 { font-size: 22px; }
-  .button { 
-    width: 100%; 
-    text-align: center; 
-    padding: 18px 30px;
-    font-size: 17px;
-  }
-  .comparison { grid-template-columns: 1fr; }
-  .price { font-size: 48px; }
-  .profit-highlight .big-number { font-size: 38px; }
-  .testimonials-grid { grid-template-columns: 1fr; }
-  .video-section video {
-    max-width: 100%;
-    min-height: 250px;
-    border-radius: 12px;
-  }
-  section { padding: 35px 15px; }
-  .card { padding: 25px 20px; }
-  .price-box { padding: 30px 20px; }
-  .hero img { max-width: 100%; }
-  
-  .sticky-cta-mobile {
-    display: block;
-  }
-  
-  body {
-    padding-bottom: 90px;
-  }
-}
-</style>
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            background: #f3f4f6;
+            padding: 80px 0;
+        }
+
+        .testimonials h3 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1e3a8a;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1e3a8a;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #f59e0b;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .pricing h3,
+            .features h3,
+            .testimonials h3 {
+                font-size: 28px;
+            }
+
+            .cta-button {
+                padding: 14px 36px;
+                font-size: 16px;
+            }
+        }
+    </style>
+    <!-- Mercado Pago Security Script (antifraude - gera MP_DEVICE_SESSION_ID) -->
+    <script src="https://www.mercadopago.com/v2/security.js" view="checkout"></script>
 </head>
 <body>
 
+<!-- HEADER -->
+<header>
+    <div class="container">
+        <div class="logo-section">
+            <div style="width: 50px; height: 50px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #2563eb;">PW</div>
+            <h1>Park & Wash</h1>
+        </div>
+        <p class="tagline">Software de Gestão para Estacionamentos e Lava-Rápidos</p>
+    </div>
+</header>
+
 <!-- HERO -->
 <section class="hero">
-  <div class="container">
-    <div class="subtitle">CURSO ONLINE JUDIE</div>
-    <h1>Como Ganhar R$ 1.500-2.000/Mês Vendendo Bonecas Premium</h1>
-    <p class="subheadline" style="font-size: 20px; font-weight: 600; color: #c94a7c;">
-      Transforme R$ 30 em R$ 180-250 por peça
-    </p>
-    <p class="subheadline" style="font-size: 18px; font-style: italic; color: #666;">
-      (Mesmo se você nunca pegou em agulha e linha)
-    </p>
-    
-    <!-- VIDEO-1: BONECA PRONTA (RESULTADO FINAL) -->
-    <div style="margin: 35px auto; max-width: 700px;">
-      <video autoplay muted loop playsinline controls poster="imagens/capa-video1.jpg" style="width: 100%; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
-        <source src="videos/video-1.mp4" type="video/mp4">
-      </video>
-      <p style="text-align:center; color:#c94a7c; margin-top: 15px; font-size: 17px; font-weight: 600;">
-        ✨ Veja o resultado incrível que VOCÊ vai conseguir criar!
-      </p>
+    <div class="container">
+        <h2>Controle Total do Seu Negócio</h2>
+        <p>Gestione estacionamentos e lava-rápidos com facilidade. Reduz perda, controla estoque e gera relatórios detalhados.</p>
+        <button class="cta-button" onclick="irParaPagamento()">Comece Agora - R$ 119,90/mês</button>
     </div>
-    
-    <div class="profit-highlight">
-      <h3>💰 Cada Judie Vale</h3>
-      <div class="big-number">R$ 180-250</div>
-      <p><strong>Custo de material: apenas R$ 30-40</strong></p>
-      <p style="font-size: 16px; color: #28a745; font-weight: 600;">✨ Lucro de R$ 140-210 por boneca!</p>
-    </div>
-    
-    <!-- PRICE BOX PRINCIPAL -->
-    <div class="price-box">
-      <p class="price-label">Investimento</p>
-      <p class="price">R$ 119,90</p>
-      <p class="installments">ou 12x de <strong>R$ 9,99</strong></p>
-      
-      <div class="price-details">
-        <p>✅ Acesso vitalício ao curso completo</p>
-        <p>✅ 30 aulas + moldes em PDF</p>
-        <p>🎁 4 Aulas Bônus exclusivas</p>
-        <p>✅ 7 dias de garantia total</p>
-      </div>
-      
-      <a class="button" href="https://pay.hotmart.com/J103928362V" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'add_to_cart', {currency: 'BRL', value: 119.90, items: [{item_id: 'judie_001', item_name: 'Curso Coelhinha Judie', price: 119.90, quantity: 1}]}); fbq('track', 'AddToCart', {value: 119.90, currency: 'BRL', content_name: 'Curso Judie', content_ids: ['judie_001']}); gtag('event', 'begin_checkout', {currency: 'BRL', value: 119.90, items: [{item_id: 'judie_001', item_name: 'Curso Coelhinha Judie', price: 119.90, quantity: 1}]}); fbq('track', 'InitiateCheckout', {value: 119.90, currency: 'BRL', content_name: 'Curso Judie', content_ids: ['judie_001']}); return true;">🎯 SIM! Quero Faturar R$ 1.500/Mês</a>
-      <span class="button-info">🔒 Pagamento 100% seguro via Hotmart</span>
-    </div>
-  </div>
 </section>
 
-<!-- CALCULADORA ROI -->
-<section style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 50px 20px;">
-  <div class="container">
-    <div class="card" style="background: white; border: 3px solid #28a745;">
-      <h2 style="color: #28a745;">💰 Faça as Contas Comigo</h2>
-      
-      <div style="max-width: 600px; margin: 30px auto;">
-        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin-bottom: 20px;">
-          <p style="margin: 10px 0; font-size: 18px;">
-            <strong>Investimento no curso:</strong> 
-            <span style="color: #c94a7c; font-size: 24px; font-weight: bold;">R$ 119,90</span>
-          </p>
-          <p style="margin: 10px 0; font-size: 18px;">
-            <strong>Valor de venda 1 Judie:</strong> 
-            <span style="color: #28a745; font-size: 24px; font-weight: bold;">R$ 180-250</span>
-          </p>
-          <p style="margin: 10px 0; font-size: 16px; color: #666;">
-            <strong>Custo materiais por Judie:</strong> ~R$ 30-40
-          </p>
+<!-- PRICING -->
+<section class="pricing">
+    <div class="container">
+        <h3>Simples e Transparente</h3>
+        <div class="price-card">
+            <h4>Park & Wash Pro</h4>
+            <div class="price-amount">R$ 119,90</div>
+            <div class="price-period">por mês</div>
+            
+            <ul class="price-features">
+                <li>Dashboard em tempo real</li>
+                <li>Gestão de entradas/saídas</li>
+                <li>Controle de estoque</li>
+                <li>Relatórios detalhados</li>
+                <li>Backup automático</li>
+                <li>Suporte por email</li>
+                <li>Atualizações grátis</li>
+            </ul>
+
+            <button class="cta-button" onclick="irParaPagamento()" style="width: 100%;">Começar Teste Gratuito</button>
+            <p style="margin-top: 20px; color: #666; font-size: 14px;">Sem cartão de crédito. Sem compromisso.</p>
         </div>
-        
-        <div style="background: #d4edda; border: 3px dashed #28a745; border-radius: 12px; padding: 25px; text-align: center;">
-          <p style="font-size: 20px; font-weight: bold; color: #155724; margin-bottom: 15px;">
-            ✨ COM APENAS 1 JUDIE VENDIDA:
-          </p>
-          <ul style="list-style: none; padding: 0; text-align: left; max-width: 400px; margin: 0 auto;">
-            <li style="margin: 10px 0; font-size: 17px; color: #155724;">
-              ✅ Você já pagou o curso
-            </li>
-            <li style="margin: 10px 0; font-size: 17px; color: #155724;">
-              ✅ E ainda lucrou R$ 60-130!
-            </li>
-          </ul>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <div class="container">
+        <h3>Por que escolher Park & Wash?</h3>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h4>Dashboard em Tempo Real</h4>
+                <p>Veja todos os dados do seu negócio num único painel. Entradas, saídas, faturamento e mais.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h4>Segurança Garantida</h4>
+                <p>Seus dados são protegidos com criptografia. Backup automático todos os dias.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h4>Relatórios Inteligentes</h4>
+                <p>Gere relatórios detalhados. Identifique tendências e tome decisões melhores.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <h4>Fácil de Usar</h4>
+                <p>Interface intuitiva. Nenhum conhecimento técnico necessário. Comece em minutos.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h4>Atualizações Grátis</h4>
+                <p>Novas funcionalidades e melhorias constantemente. Sempre grátis.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h4>Suporte Rápido</h4>
+                <p>Dúvidas? Entre em contato. Respondemos em até 24 horas.</p>
+            </div>
         </div>
-        
-        <div style="background: #fff3cd; border-radius: 12px; padding: 20px; margin-top: 20px; text-align: center;">
-          <p style="font-size: 18px; font-weight: 600; color: #856404; margin: 0;">
-            📈 Vendendo apenas 2 Judies por semana:
-          </p>
-          <p style="font-size: 16px; color: #856404; margin: 10px 0 5px;">
-            • Mês 1: <strong style="font-size: 22px; color: #28a745;">R$ 1.200 - R$ 1.800</strong>
-          </p>
-          <p style="font-size: 16px; color: #856404; margin: 5px 0 0;">
-            • Seu investimento de R$ 119,90 virou um <strong>negócio rentável!</strong>
-          </p>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+    <div class="container">
+        <h3>O que dizem nossos clientes</h3>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Park & Wash transformou a forma como gerencio meu estacionamento. Reduzi perdas em 40% no primeiro mês!"</p>
+            <p class="testimonial-author">João Silva - Estacionamento Centro</p>
         </div>
-      </div>
-      
-      <div style="text-align: center; margin-top: 30px;">
-        <a class="button" href="https://pay.hotmart.com/J103928362V" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'add_to_cart', {currency: 'BRL', value: 119.90, items: [{item_id: 'judie_001', item_name: 'Curso Coelhinha Judie', price: 119.90, quantity: 1}]}); fbq('track', 'AddToCart', {value: 119.90, currency: 'BRL', content_name: 'Curso Judie', content_ids: ['judie_001']}); return true;">
-          ✅ Quero Começar a Lucrar Agora
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VEJA COMO É SIMPLES (VIDEO-2: PROCESSO) -->
-<section>
-  <div class="container card">
-    <h2>✨ Veja Como É Simples Criar a Judie</h2>
-    <p style="text-align: center; font-size: 18px; color: #666; max-width: 650px; margin: 0 auto 25px;">
-      Técnica profissional ao alcance de qualquer pessoa, mesmo sem experiência
-    </p>
-    
-    <!-- VIDEO-2: PROCESSO DE CONFECÇÃO -->
-    <div style="margin: 25px auto; max-width: 700px;">
-      <video autoplay muted loop playsinline controls poster="imagens/capa-video1.jpg" style="width: 100%; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.12);">
-        <source src="videos/video-2.mp4" type="video/mp4">
-      </video>
-      <p style="text-align:center; color:#555; margin-top: 15px; font-size: 16px;">
-        ▶️ Acompanhe o passo a passo na máquina de costura - É muito mais fácil do que parece!
-      </p>
-    </div>
-    
-    <div style="background: #e8f5e9; border-radius: 12px; padding: 25px; margin-top: 30px; text-align: center;">
-      <p style="font-size: 18px; color: #155724; margin: 0; font-weight: 600;">
-        ✅ Aulas em Full HD • ✅ Passo a passo detalhado • ✅ Qualquer máquina doméstica serve
-      </p>
-    </div>
-    
-    <div style="text-align: center; margin-top: 30px;">
-      <a class="button" href="https://pay.hotmart.com/J103928362V" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'add_to_cart', {currency: 'BRL', value: 119.90, items: [{item_id: 'judie_001', item_name: 'Curso Coelhinha Judie', price: 119.90, quantity: 1}]}); fbq('track', 'AddToCart', {value: 119.90, currency: 'BRL', content_name: 'Curso Judie', content_ids: ['judie_001']}); return true;">
-        🚀 Quero Aprender Agora
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- O DIFERENCIAL -->
-<section>
-  <div class="container card">
-    <h2>Por Que a Judie é Diferente?</h2>
-    <p style="text-align: center; font-size: 18px; max-width: 650px; margin: 0 auto 30px;">A Judie não é uma boneca comum. É uma peça premium com técnicas profissionais que multiplicam o valor de venda.</p>
-    
-    <div class="comparison">
-      <div class="comparison-box without">
-        <h4>❌ Bonecas Comuns</h4>
-        <ul>
-          <li>• Vendem por R$ 30-50</li>
-          <li>• Técnica básica</li>
-          <li>• Acabamento simples</li>
-          <li>• Baixa margem</li>
-        </ul>
-      </div>
-      <div class="comparison-box with">
-        <h4>✅ Boneca Judie</h4>
-        <ul>
-          <li>• Vendem por R$ 180-250</li>
-          <li>• Técnica profissional</li>
-          <li>• Acabamento premium</li>
-          <li>• Alta margem de lucro</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- O QUE VOCÊ RECEBE -->
-<section>
-  <div class="container card">
-    <h2>💎 O Que Está Incluído</h2>
-    <ul class="benefits-list">
-      <li>
-        <strong>✅ 30 Aulas Completas em Full HD</strong>
-        Passo a passo detalhado da técnica profissional, mesmo para iniciantes
-      </li>
-      <li>
-        <strong>✅ Moldes Prontos em PDF</strong>
-        Imprima em casa e comece imediatamente
-      </li>
-      <li>
-        <strong>🎁 BÔNUS 1: Aula Vestido Rosa Chá</strong>
-        Variação elegante para ampliar suas criações
-      </li>
-      <li>
-        <strong>🎁 BÔNUS 2: Aula Vestido Manga Borboleta</strong>
-        Aprenda a criar manga borboleta charmosa e delicada
-      </li>
-      <li>
-        <strong>🎁 BÔNUS 3: Aula Calcinha</strong>
-        Complete o visual da sua Judie com acabamento profissional
-      </li>
-      <li>
-        <strong>✅ Acesso Vitalício</strong>
-        Assista quando e quantas vezes quiser, para sempre
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- AULAS BÔNUS COM VIDEO AULA-BONUS -->
-<section style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 50px 20px;">
-  <div class="container">
-    <div class="card" style="background: white; border: 3px dashed #ff9800;">
-      <h2 style="color: #e65100; margin-top: 0;">🎁 Aulas Bônus Exclusivas (Valor R$ 197)</h2>
-      <p style="font-size: 18px; color: #555; margin-bottom: 30px; text-align: center;">
-        Aprenda variações que vão multiplicar suas possibilidades de venda!
-      </p>
-      
-      <!-- VIDEO AULA-BONUS: DEMONSTRAÇÃO DOS BÔNUS -->
-      <div style="margin: 35px auto; max-width: 700px;">
-        <video autoplay muted loop playsinline controls poster="imagens/capa-video1.jpg" style="width: 100%; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.12);">
-          <source src="videos/aula-bonus.mp4" type="video/mp4">
-        </video>
-        <p style="text-align:center; color:#e65100; margin-top: 15px; font-size: 16px; font-weight: 600;">
-          🎬 Prévia das Aulas Bônus que você vai receber GRÁTIS
-        </p>
-      </div>
-      
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 30px;">
-        <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 25px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); text-align: center;">
-          <div style="font-size: 45px; margin-bottom: 12px;">👗</div>
-          <h4 style="color: #c94a7c; margin: 10px 0; font-size: 18px;">Vestido Rosa Chá</h4>
-          <p style="font-size: 14px; color: #666; margin: 8px 0;">Estilo clássico e elegante</p>
-          <p style="font-size: 13px; color: #28a745; font-weight: 600; margin-top: 10px;">+ R$ 30 no valor</p>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Simples de usar, eficaz e o preço é justo. Recomendo para qualquer estacionamento ou lava-rápido."</p>
+            <p class="testimonial-author">Maria Santos - Lava Rápido Express</p>
         </div>
-        
-        <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 25px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); text-align: center;">
-          <div style="font-size: 45px; margin-bottom: 12px;">🦋</div>
-          <h4 style="color: #c94a7c; margin: 10px 0; font-size: 18px;">Vestido Manga Borboleta</h4>
-          <p style="font-size: 14px; color: #666; margin: 8px 0;">Delicado e charmoso</p>
-          <p style="font-size: 13px; color: #28a745; font-weight: 600; margin-top: 10px;">+ R$ 30 no valor</p>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"O suporte é excelente. Qualquer dúvida eles resolvem rápido. Vale muito a pena!"</p>
+            <p class="testimonial-author">Carlos Mendes - Auto Park</p>
         </div>
-        
-        <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 25px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); text-align: center;">
-          <div style="font-size: 45px; margin-bottom: 12px;">✨</div>
-          <h4 style="color: #c94a7c; margin: 10px 0; font-size: 18px;">Calcinha Premium</h4>
-          <p style="font-size: 14px; color: #666; margin: 8px 0;">Acabamento profissional</p>
-          <p style="font-size: 13px; color: #28a745; font-weight: 600; margin-top: 10px;">Diferencial</p>
-        </div>
-        
-        <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 25px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); text-align: center;">
-          <div style="font-size: 45px; margin-bottom: 12px;">🎀</div>
-          <h4 style="color: #c94a7c; margin: 10px 0; font-size: 18px;">Técnicas Especiais</h4>
-          <p style="font-size: 14px; color: #666; margin: 8px 0;">Laços e detalhes</p>
-          <p style="font-size: 13px; color: #28a745; font-weight: 600; margin-top: 10px;">Exclusivo</p>
-        </div>
-      </div>
-      
-      <div style="background: #fff3cd; border: 2px dashed #ffc107; border-radius: 10px; padding: 20px; margin-top: 30px; text-align: center;">
-        <p style="font-size: 17px; color: #856404; font-weight: 600; margin: 0;">
-          🔥 GRÁTIS com o curso - Normalmente vendido separadamente por R$ 197!
-        </p>
-      </div>
-      
-      <div style="text-align: center; margin-top: 30px;">
-        <a class="button" href="https://pay.hotmart.com/J103928362V" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'add_to_cart', {currency: 'BRL', value: 119.90, items: [{item_id: 'judie_001', item_name: 'Curso Coelhinha Judie', price: 119.90, quantity: 1}]}); fbq('track', 'AddToCart', {value: 119.90, currency: 'BRL', content_name: 'Curso Judie', content_ids: ['judie_001']}); return true;">
-          🎁 Quero Todos os Bônus Agora
-        </a>
-      </div>
     </div>
-  </div>
 </section>
 
-<!-- IMAGEM DA BONECA PRONTA -->
-<section>
-  <div class="container">
-    <img src="imagens/judie-grama2.JPG" alt="Boneca Judie - Resultado Final Premium" loading="lazy" width="600" height="800" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-    <p style="text-align: center; color: #c94a7c; margin-top: 20px; font-size: 18px; font-weight: 600;">
-      ✨ Seu resultado será tão profissional quanto este!
-    </p>
-  </div>
-</section>
-
-<!-- PARA QUEM É -->
-<section>
-  <div class="container card">
-    <h2>✅ Para Quem É Este Curso?</h2>
-    
-    <div style="max-width: 700px; margin: 30px auto;">
-      <div style="background: #e8f5e9; border-left: 4px solid #28a745; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
-        <h3 style="color: #28a745; margin-top: 0;">✅ Este curso é PERFEITO para você se:</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li style="margin: 12px 0; font-size: 16px; color: #155724;">
-            ☑️ Nunca fez artesanato mas quer aprender do zero
-          </li>
-          <li style="margin: 12px 0; font-size: 16px; color: #155724;">
-            ☑️ Já faz bonecas mas quer cobrar preços premium
-          </li>
-          <li style="margin: 12px 0; font-size: 16px; color: #155724;">
-            ☑️ Quer uma renda extra trabalhando em casa
-          </li>
-          <li style="margin: 12px 0; font-size: 16px; color: #155724;">
-            ☑️ Busca um negócio com baixo investimento inicial
-          </li>
-          <li style="margin: 12px 0; font-size: 16px; color: #155724;">
-            ☑️ Quer vender peças de alto valor agregado
-          </li>
-        </ul>
-      </div>
-      
-      <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 25px; border-radius: 10px;">
-        <h3 style="color: #856404; margin-top: 0;">❌ Este curso NÃO é para você se:</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li style="margin: 12px 0; font-size: 16px; color: #856404;">
-            ✖️ Espera resultados sem praticar o que aprendeu
-          </li>
-          <li style="margin: 12px 0; font-size: 16px; color: #856404;">
-            ✖️ Não tem 2-3 horas por semana para assistir as aulas
-          </li>
-          <li style="margin: 12px 0; font-size: 16px; color: #856404;">
-            ✖️ Quer ficar rico da noite para o dia
-          </li>
-        </ul>
-      </div>
+<!-- CTA FINAL -->
+<section style="background: #1e3a8a; color: white; padding: 60px 0; text-align: center;">
+    <div class="container">
+        <h3 style="font-size: 36px; margin-bottom: 20px;">Comece a Usar Agora</h3>
+        <p style="font-size: 18px; margin-bottom: 30px;">Sem instalação complicada. Sem compromisso. Cancele quando quiser.</p>
+        <button class="cta-button" onclick="irParaPagamento()">Acesse Park & Wash</button>
     </div>
-  </div>
 </section>
 
-<!-- DEPOIMENTOS -->
-<section>
-  <div class="container card">
-    <h2>⭐ O Que Dizem Nossas Alunas</h2>
-    <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 30px;">
-      Mais de 300 alunas já transformaram suas vidas com o Curso Judie
-    </p>
-    
-    <div class="testimonials-grid">
-      <div class="testimonial" style="border: 2px solid #28a745;">
-        <div style="font-size: 24px; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
-        <div class="testimonial-text">
-          "Nunca imaginei que conseguiria criar uma boneca tão profissional! Vendi 2 em 1 semana por R$ 200 cada uma."
-        </div>
-        <div class="testimonial-author">— Maria Helena Santos</div>
-        <div style="font-size: 13px; color: #999; margin-top: 3px;">Belo Horizonte, MG</div>
-        <div class="testimonial-result">💰 Lucrou R$ 320 na primeira semana</div>
-      </div>
-      
-      <div class="testimonial" style="border: 2px solid #28a745;">
-        <div style="font-size: 24px; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
-        <div class="testimonial-text">
-          "Agora me sinto uma verdadeira artesã profissional. Meus clientes fazem fila para encomendar!"
-        </div>
-        <div class="testimonial-author">— Ana Paula Rodrigues</div>
-        <div style="font-size: 13px; color: #999; margin-top: 3px;">São Paulo, SP</div>
-        <div class="testimonial-result">⭐ Vende por R$ 220 cada</div>
-      </div>
-      
-      <div class="testimonial" style="border: 2px solid #28a745;">
-        <div style="font-size: 24px; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
-        <div class="testimonial-text">
-          "Aprendi a valorizar meu trabalho e cobrar o que realmente mereço. Mudou meu mindset!"
-        </div>
-        <div class="testimonial-author">— Simone Rocha</div>
-        <div style="font-size: 13px; color: #999; margin-top: 3px;">Curitiba, PR</div>
-        <div class="testimonial-result">📈 Triplicou seus preços</div>
-      </div>
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p><strong>Park & Wash</strong> © 2026 - Todos os direitos reservados</p>
+        <p>Desenvolvido com ❤️ por <a href="mailto:cmte_leal@yahoo.com.br">Victoriae Sumus</a></p>
+        <p>Dúvidas? <a href="mailto:cmte_leal@yahoo.com.br">Entre em contato</a> | Tel: <a href="tel:11999997925">(11) 99999-7925</a></p>
     </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section>
-  <div class="container card">
-    <h2>❓ Perguntas Frequentes</h2>
-    
-    <div style="max-width: 700px; margin: 30px auto;">
-      
-      <details style="background: #f8f9fa; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-left: 4px solid #c94a7c; cursor: pointer;">
-        <summary style="font-weight: 600; font-size: 17px; color: #c94a7c;">
-          ▼ Preciso de máquina de costura profissional?
-        </summary>
-        <p style="margin-top: 15px; color: #555; line-height: 1.6;">
-          Não! Qualquer máquina doméstica serve perfeitamente. O que faz a diferença é a técnica, não o equipamento.
-        </p>
-      </details>
-      
-      <details style="background: #f8f9fa; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-left: 4px solid #c94a7c; cursor: pointer;">
-        <summary style="font-weight: 600; font-size: 17px; color: #c94a7c;">
-          ▼ Quanto tempo leva para fazer uma Judie?
-        </summary>
-        <p style="margin-top: 15px; color: #555; line-height: 1.6;">
-          De 3 a 5 horas na primeira vez. Depois que pegar prática, menos de 3 horas!
-        </p>
-      </details>
-      
-      <details style="background: #f8f9fa; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-left: 4px solid #c94a7c; cursor: pointer;">
-        <summary style="font-weight: 600; font-size: 17px; color: #c94a7c;">
-          ▼ Tem suporte se eu tiver dúvidas?
-        </summary>
-        <p style="margin-top: 15px; color: #555; line-height: 1.6;">
-          Sim! Há seção de comentários em cada aula para tirar todas as suas dúvidas.
-        </p>
-      </details>
-      
-      <details style="background: #f8f9fa; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-left: 4px solid #c94a7c; cursor: pointer;">
-        <summary style="font-weight: 600; font-size: 17px; color: #c94a7c;">
-          ▼ Posso parcelar o curso?
-        </summary>
-        <p style="margin-top: 15px; color: #555; line-height: 1.6;">
-          Sim! Em até 12x de R$ 9,99 sem juros no cartão de crédito.
-        </p>
-      </details>
-      
-      <details style="background: #f8f9fa; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-left: 4px solid #c94a7c; cursor: pointer;">
-        <summary style="font-weight: 600; font-size: 17px; color: #c94a7c;">
-          ▼ E se eu não gostar do curso?
-        </summary>
-        <p style="margin-top: 15px; color: #555; line-height: 1.6;">
-          7 dias de garantia total. Devolvemos 100% do seu dinheiro sem perguntas, sem burocracias.
-        </p>
-      </details>
-      
-      <details style="background: #f8f9fa; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-left: 4px solid #c94a7c; cursor: pointer;">
-        <summary style="font-weight: 600; font-size: 17px; color: #c94a7c;">
-          ▼ Quanto custa o material para fazer 1 Judie?
-        </summary>
-        <p style="margin-top: 15px; color: #555; line-height: 1.6;">
-          Entre R$ 30-40 (tecido, enchimento, linha). Com venda de R$ 180-250, sua margem é excelente!
-        </p>
-      </details>
-      
-      <details style="background: #f8f9fa; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-left: 4px solid #c94a7c; cursor: pointer;">
-        <summary style="font-weight: 600; font-size: 17px; color: #c94a7c;">
-          ▼ Consigo vender mesmo sendo iniciante?
-        </summary>
-        <p style="margin-top: 15px; color: #555; line-height: 1.6;">
-          Sim! Nossas alunas iniciantes conseguem vender já na primeira Judie criada. A técnica profissional que você aprende faz toda a diferença.
-        </p>
-      </details>
-      
-      <details style="background: #f8f9fa; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-left: 4px solid #c94a7c; cursor: pointer;">
-        <summary style="font-weight: 600; font-size: 17px; color: #c94a7c;">
-          ▼ O acesso ao curso expira?
-        </summary>
-        <p style="margin-top: 15px; color: #555; line-height: 1.6;">
-          Não! O acesso é VITALÍCIO. Você pode assistir as aulas quantas vezes quiser, para sempre.
-        </p>
-      </details>
-      
-    </div>
-  </div>
-</section>
-
-<!-- GARANTIA E CTA FINAL -->
-<section>
-  <div class="container card">
-    <div class="guarantee-box">
-      <h3>🛡️ Garantia Total de 7 Dias</h3>
-      <p>Você tem 7 dias para testar o curso completo. Se não ficar satisfeita por QUALQUER motivo, devolvemos 100% do seu dinheiro.</p>
-      <p style="margin-bottom:0;"><strong>Sem perguntas, sem burocracias.</strong></p>
-    </div>
-    
-    <div style="text-align:center; margin-top:40px;">
-      <h2>Comece Sua Transformação Hoje</h2>
-      <p style="font-size:18px; color:#555; max-width:600px; margin:20px auto;">
-        Com apenas 1 venda você recupera o investimento e ainda lucra. As próximas vendas são 100% lucro!
-      </p>
-      
-      <div class="price-box" style="margin-top:30px;">
-        <p class="price-label">Investimento</p>
-        <p class="price">R$ 119,90</p>
-        <p class="installments">ou 12x de <strong>R$ 9,99</strong></p>
-        
-        <a class="button" href="https://pay.hotmart.com/J103928362V" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'add_to_cart', {currency: 'BRL', value: 119.90, items: [{item_id: 'judie_001', item_name: 'Curso Coelhinha Judie', price: 119.90, quantity: 1}]}); fbq('track', 'AddToCart', {value: 119.90, currency: 'BRL', content_name: 'Curso Judie', content_ids: ['judie_001']}); gtag('event', 'begin_checkout', {currency: 'BRL', value: 119.90, items: [{item_id: 'judie_001', item_name: 'Curso Coelhinha Judie', price: 119.90, quantity: 1}]}); fbq('track', 'InitiateCheckout', {value: 119.90, currency: 'BRL', content_name: 'Curso Judie', content_ids: ['judie_001']}); return true;">🚀 Quero Começar Agora</a>
-        <span class="button-info">🔒 Pagamento seguro via Hotmart</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ÚLTIMA CHAMADA -->
-<section class="hero" style="background: linear-gradient(135deg, #c94a7c 0%, #a0365f 100%); padding:50px 20px;">
-  <div class="container">
-    <h2 style="color: white; font-size: 32px;">✨ Comece Hoje e Transforme Seu Artesanato!</h2>
-    <p style="font-size: 20px; color: white; max-width: 650px; margin: 20px auto; line-height: 1.6;">
-      Acesso vitalício, moldes em PDF e aulas bônus exclusivas esperando por você.
-    </p>
-    
-    <a class="button" href="https://pay.hotmart.com/J103928362V" target="_blank" rel="noopener noreferrer" style="background: white; color: #a0365f; margin-top: 30px;" onclick="gtag('event', 'add_to_cart', {currency: 'BRL', value: 119.90, items: [{item_id: 'judie_001', item_name: 'Curso Coelhinha Judie', price: 119.90, quantity: 1}]}); fbq('track', 'AddToCart', {value: 119.90, currency: 'BRL', content_name: 'Curso Judie', content_ids: ['judie_001']}); return true;">
-      🎯 Garantir Minha Vaga Agora
-    </a>
-    <span class="button-info" style="color: white;">Acesso imediato após confirmação do pagamento</span>
-  </div>
-</section>
-
-<!-- RODAPÉ -->
-<footer style="background:#f8f9fa; padding:30px 20px; text-align:center; color:#666; font-size:14px;">
-  <p>© 2025 Adriana Leal - @escoladebonecasadrianaleal</p>
-  <p>Todos os direitos reservados - CNPJ 473998740001/27</p>
 </footer>
 
-<!-- CTA STICKY MOBILE -->
-<div class="sticky-cta-mobile">
-  <div class="price-mini">💰 R$ 119,90 ou 12x de R$ 9,99</div>
-  <a class="button" href="https://pay.hotmart.com/J103928362V" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'add_to_cart', {currency: 'BRL', value: 119.90, items: [{item_id: 'judie_001', item_name: 'Curso Coelhinha Judie', price: 119.90, quantity: 1}]}); fbq('track', 'AddToCart', {value: 119.90, currency: 'BRL', content_name: 'Curso Judie', content_ids: ['judie_001']}); return true;">
-    🎯 Garantir Minha Vaga Agora
-  </a>
-</div>
-
-<!-- SCRIPTS DE TRACKING -->
 <script>
-// Rastrear tempo na página
-let tempoInicio = Date.now();
-window.addEventListener('beforeunload', function() {
-  let tempoTotal = Math.floor((Date.now() - tempoInicio) / 1000);
-  if (typeof fbq !== 'undefined' && tempoTotal > 30) {
-    fbq('trackCustom', 'TempoEngajado', {
-      segundos: tempoTotal
-    });
-  }
-});
+    async function irParaPagamento() {
+        const botao = event.target;
+        const textoOriginal = botao.textContent;
+        
+        // Desabilita o botão e mostra loading
+        botao.disabled = true;
+        botao.textContent = "Carregando...";
+        
+        try {
+            // Aguarda Device ID do Mercado Pago (máx 2 segundos)
+            let deviceId = sessionStorage.getItem('MP_DEVICE_SESSION_ID');
+            let tentativas = 0;
+            
+            while (!deviceId && tentativas < 20) {
+                await new Promise(resolve => setTimeout(resolve, 100));
+                deviceId = sessionStorage.getItem('MP_DEVICE_SESSION_ID');
+                tentativas++;
+            }
+            
+            if (deviceId) {
+                console.log("✅ Device ID capturado:", deviceId);
+            } else {
+                console.warn("⚠️ Device ID não capturado após 2 segundos (continuando mesmo assim)");
+            }
+            
+            // Prepara headers com Device ID
+            const headers = { "Content-Type": "application/json" };
+            if (deviceId) {
+                headers["X-meli-session-id"] = deviceId;
+            }
+            
+            // Chama a API pra gerar o link de assinatura
+            const response = await fetch("https://parkwash-api.onrender.com/pagamento/assinatura", {
+                method: "POST",
+                headers: headers,
+                body: JSON.stringify({ email: "cliente@parkwash.com.br" })
+            });
+            
+            if (!response.ok) {
+                throw new Error(`Erro ${response.status}: Não conseguimos gerar seu link de pagamento`);
+            }
+            
+            const dados = await response.json();
+            
+            if (dados.init_point) {
+                // Redireciona pro Mercado Pago
+                window.location.href = dados.init_point;
+            } else {
+                throw new Error("Resposta inválida da API");
+            }
+        } catch (erro) {
+            // Reabilita o botão e mostra o erro
+            botao.disabled = false;
+            botao.textContent = textoOriginal;
+            alert(`Erro ao processar sua solicitação: ${erro.message}\n\nTente novamente em alguns momentos.`);
+            console.error("Erro na geração de link:", erro);
+        }
+    }
 </script>
 
 </body>
