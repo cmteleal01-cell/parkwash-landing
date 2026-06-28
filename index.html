@@ -537,10 +537,10 @@
         botao.textContent = 'Carregando...';
 
         try {
-            // Aguarda Device ID do Mercado Pago (máx 2 segundos) — antifraude
+            // Aguarda Device ID do Mercado Pago (máx 1 segundo) — antifraude
             let deviceId = sessionStorage.getItem('MP_DEVICE_SESSION_ID');
             let tentativas = 0;
-            while (!deviceId && tentativas < 20) {
+            while (!deviceId && tentativas < 10) {
                 await new Promise(resolve => setTimeout(resolve, 100));
                 deviceId = sessionStorage.getItem('MP_DEVICE_SESSION_ID');
                 tentativas++;
@@ -564,7 +564,9 @@
             const dados = await response.json();
 
             if (dados.link_assinatura) {
-                window.location.href = dados.link_assinatura;
+                window.open(dados.link_assinatura, '_blank');
+                botao.disabled = false;
+                botao.textContent = textoOriginal;
             } else {
                 throw new Error(dados.error || "Resposta inválida da API");
             }
