@@ -564,7 +564,13 @@
             const dados = await response.json();
 
             if (dados.link_assinatura) {
-                window.open(dados.link_assinatura, '_blank');
+                const novaAba = window.open(dados.link_assinatura, '_blank');
+                if (!novaAba || novaAba.closed || typeof novaAba.closed === 'undefined') {
+                    // Popup bloqueado (comum em navegador dentro do Instagram/Facebook) -- navega na mesma aba
+                    window.location.href = dados.link_assinatura;
+                } else {
+                    fecharModalEmail();
+                }
                 botao.disabled = false;
                 botao.textContent = textoOriginal;
             } else {
