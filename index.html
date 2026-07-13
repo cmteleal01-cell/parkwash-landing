@@ -859,6 +859,13 @@
 
     // ===== MODAL E-MAIL =====
     function abrirModalEmail() {
+        if (typeof fbq === 'function') {
+            fbq('track', 'AddToCart', {
+                content_name: 'Park & Wash Pro',
+                value: 159.90,
+                currency: 'BRL'
+            });
+        }
         if (!perfilAtual) {
             alert('Por favor, selecione seu tipo de negócio primeiro.');
             return;
@@ -886,6 +893,13 @@
             return;
         }
         erroEl.textContent = '';
+        if (typeof fbq === 'function') {
+            fbq('track', 'Lead', {
+                content_name: 'Park & Wash Pro',
+                value: 159.90,
+                currency: 'BRL'
+            });
+        }
 
         const botao = document.getElementById('botaoConfirmarEmail');
         const textoOriginal = botao.textContent;
