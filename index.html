@@ -198,6 +198,29 @@
             border: none;
         }
 
+        /* ===== DEMO VIDEO ===== */
+        .demo-video-wrap {
+            max-width: 900px;
+            margin: 50px auto 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .demo-video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 640px) {
+            .demo-video-wrap {
+                margin-top: 30px;
+                border-radius: 8px;
+            }
+        }
+
         .cta-button:hover {
             background: #d97706;
             transform: translateY(-2px);
@@ -626,6 +649,12 @@
         <h2 id="heroTitle">Seu Estacionamento com Controle Total</h2>
         <p id="heroDesc">Rastreie cada veículo, saiba quanto ganha por hora, elimine erros de caixa — tudo em uma única tela, integrado com WhatsApp automático.</p>
         <button class="cta-button" onclick="abrirModalEmail()">Assinar Agora — R$ 159,90/mês</button>
+
+        <div class="demo-video-wrap">
+            <video class="demo-video" autoplay muted loop playsinline preload="metadata">
+                <source src="parkwash-demo-landing.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 </section>
 
