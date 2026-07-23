@@ -651,10 +651,33 @@
         <button class="cta-button" onclick="abrirModalEmail()">Assinar Agora — R$ 159,90/mês</button>
 
         <div class="demo-video-wrap">
-            <video class="demo-video" autoplay muted loop playsinline preload="metadata">
-                <source src="parkwash-demo-landing.mp4" type="video/mp4">
+            <video class="demo-video" id="demoVideo" muted loop playsinline preload="none" poster="demo-poster.jpg">
+                <source data-src="parkwash-demo-landing.mp4" type="video/mp4">
             </video>
         </div>
+        <script>
+            // Carrega e toca o vídeo só depois que a página já renderizou —
+            // em mobile, autoplay de vídeo travando o load inicial é a causa
+            // mais comum de "página lenta pra abrir".
+            (function () {
+                var v = document.getElementById('demoVideo');
+                function carregarVideo() {
+                    var source = v.querySelector('source[data-src]');
+                    if (source) {
+                        source.src = source.getAttribute('data-src');
+                        v.load();
+                        v.play().catch(function () {}); // autoplay pode ser bloqueado, sem problema
+                    }
+                }
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(carregarVideo, { timeout: 2000 });
+                } else {
+                    window.addEventListener('load', function () {
+                        setTimeout(carregarVideo, 300);
+                    });
+                }
+            })();
+        </script>
     </div>
 </section>
 
